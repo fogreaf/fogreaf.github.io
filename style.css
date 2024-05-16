@@ -113,7 +113,6 @@ section.products a.product:hover {
 section.products a.product:hover svg {
   fill: #fff;
   opacity: 0.1;
-  rotate: 360deg;
 }
 section.products a.product:hover::after {
   width: 150%;
