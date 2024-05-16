@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Poppins:wght@600;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #000;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+html {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: calc(100vw - 10px);
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #bbb;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-clip: padding-box;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #222;
+}
+
+header {
+  width: 300px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+header svg {
+  width: 200px;
+  fill: #000;
+}
+
+p.ttl {
+  display: block;
+  font-size: 2.3rem;
+  font-family: "jaro", sans-serif;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  width: 300px;
+  margin-top: 2rem;
+  margin-inline: auto;
+}
+
+section.products {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  width: 375px;
+  margin-inline: auto;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+section.products a.product {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 175px;
+  aspect-ratio: 3/2;
+  box-shadow: 0 0 20px -10px #000;
+  font-size: 1.3rem;
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2em;
+  z-index: 1;
+  border-radius: 5px;
+  transition: all 0.35s ease-out;
+}
+section.products a.product svg {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  height: 100px;
+  fill: #000;
+  opacity: 0.2;
+  transition: all 0.35s ease-out;
+}
+section.products a.product::after {
+  content: "";
+  position: absolute;
+  left: -40px;
+  bottom: -40px;
+  width: 0;
+  aspect-ratio: 1/1;
+  background-image: linear-gradient(to right top, #000, #333);
+  z-index: -1;
+  border-radius: 50%;
+  transition: all 0.35s ease-out;
+}
+section.products a.product:hover {
+  color: #fff;
+}
+section.products a.product:hover svg {
+  fill: #fff;
+  opacity: 0.1;
+  rotate: 360deg;
+}
+section.products a.product:hover::after {
+  width: 150%;
+}/*# sourceMappingURL=style.css.map */
